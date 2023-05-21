@@ -1,5 +1,6 @@
 const planets=require('../data/index')
 
-module.exports=(req, res)=>{
-    res.status(200).json(planets)
+module.exports=async (req, res)=>{
+    const planet= await planets.list()
+    res.status(200).json(planet)
 }

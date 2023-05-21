@@ -1,3 +1,3 @@
 module.exports=(req, res)=>{
-    res.startus(200).send('creando planeta')
+    res.status(200).send('creando planeta')
 }
