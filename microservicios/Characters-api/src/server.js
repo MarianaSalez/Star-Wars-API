@@ -9,7 +9,9 @@ server.use(require('./routes'))
 
 //sobre escribo el mandejador de errores de express
 server.use((err,req,res,next)=>{
-    
+    res.status(err.statusCode|| 500).send({
+        error:true,
+        message: err.message})
 })
 
 
